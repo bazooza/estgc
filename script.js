@@ -157,6 +157,7 @@ function addEvents(auth) {
   events.forEach((event) => {
     const calendarEvent = {
       summary: "life",
+      colorId: "11",
       start: {
         dateTime: `${event.date}T${event.startTime}:00`,
         timeZone: "Europe/Minsk",
@@ -169,8 +170,7 @@ function addEvents(auth) {
 
     calendar.events.insert(
       {
-        calendarId:
-          "7b9f9475911ed9442059b9d5758e5e72b316e7c41b8653b4923284b20de45a61@group.calendar.google.com",
+        calendarId: "primary",
         resource: calendarEvent,
       },
       (err, event) => {
